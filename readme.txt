@@ -1,0 +1,1 @@
+This is a website for a fictional coffeeshop named CoffeeBara Cafe.
