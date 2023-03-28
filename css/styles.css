@@ -1,6 +1,10 @@
+/* a {
+    border: solid 1px red;
+} */
 .jumbotron {
     /* height: 90vh; */
     background-blend-mode: multiply;
+    height: 70vh;
     /* background-image: hsla(210, 47%, 20%, 0.119); */
     /* background-color: rgb(55, 60, 67); */
     /* background-image: url(https://images.unsplash.com/photo-1615486825258-2c6e2cd58cb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80); */
