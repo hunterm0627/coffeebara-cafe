@@ -22,6 +22,8 @@
 
     <link rel="stylesheet" href="css/styles.css" />
 
+    <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
+
     <title>CoffeeBara Café</title>
 
 </head>
@@ -73,30 +75,28 @@
 
     <!-- Jumbotron -->
 
-    <div class="jumbotron jumbotron-fluid mb-0 bg-primary ">
-        <div class="container ">
-            <div class="row">
-                <div class="col-8 text-white">
+    <div class="jumbotron-fluid mb-0 py-5 bg-primary ">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col col-md-8 text-white">
                     <h1 class="display-1 font-weight-bold text-uppercase">Life is Better <br />With Coffee</h1>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ut dolores sequi, quia quos ratione voluptatem laborum repellat odit nemo.</p>
+                    <button type="button" href="#" class="btn btn-danger btn-lg px-5 py-3 mt-3">
+                        Learn More!
+                    </button>
                 </div>
-            </div>
-            <div>
-                <button type="button" href="#" class="btn btn-dark btn-lg px-5 py-3 mt-3">
-                    Learn More!
-                </button>
             </div>
         </div>
     </div>
 
 <!-- Section 1 -->
+
 <div class="container">
     <div class="row">
         <div class="col">
-            <ul class="list-unstyled">
-                <li class="media">
-                    <img src="http://via.placeholder.com/640x360" class="mr-3" alt="...">
-                    <div class="media-body col-6">
+                <li class="media"">
+                    <img class="" src="http://via.placeholder.com/500x400" class="mr-3" alt="...">
+                    <div class="media-body align-self-center col-6">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
                         <p>All my girls vintage Chanel baby. So you can have your cake. Tonight, tonight, tonight, I'm walking on
                             air. Slowly swallowing down my fear, yeah yeah. Growing fast into a bolt of lightning. So hot and heavy,
@@ -105,15 +105,14 @@
                     </div>
                 </li>
                 <li class="media ">
-                    <img src="http://via.placeholder.com/640x360" class="order-last ml-3" alt="..." >
-                    <div class="media-body">
+                    <img src="http://via.placeholder.com/500x400" class="order-last ml-3" alt="..." >
+                    <div class="media-body align-self-center">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
                         <p>Maybe a reason why all the doors are closed. Cause once you're mine, once you’re mine. Be your teenage
                             dream tonight. Heavy is the head that wears the crown. It's not even a holiday, nothing to celebrate. A
                             perfect storm, perfect storm.</p>
                     </div>
                 </li>
-            </ul>
         </div>
     </div>
 </div>
@@ -122,28 +121,65 @@
 
 <h4 class="text-center text-uppercase font-weight-bold my-5 ">Good Coffee, <span class="text-muted">For People & Planet</span></h4>
     <div class="container my-5">
-        <div class="row">
+        <div class="row text-center"> <!-- 12 grids to use -->
             <div class="col col-sm-3">
-                <img src="http://via.placeholder.com/100x100" href="#" alt="image 1"/>
+                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 1"/>
                     <h5>Sourced</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
-                <img src="http://via.placeholder.com/100x100" href="#" alt="image 2"/>
+                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 2"/>
                     <h5>Roasted</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
-                <img src="http://via.placeholder.com/100x100" href="#" alt="image 2"/>
+                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 3"/>
                     <h5>Roasted</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
-                <img src="http://via.placeholder.com/100x100" href="#" alt="image 2"/>
+                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 4"/>
                     <h5>Roasted</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
         </div>
+    </div>
+    
+    <!-- Coffee Bags -->
+    
+    <div class="container"> <!-- Title -->
+        <div class="row">
+            <div class="col text-center font-weight-bold">
+                <h2 class="display-2 text-uppercase">Brew Boldly</h2>
+                <p class="text-muted">With Our Signature Blends</p>
+            </div>
+        </div>
+
+        <!-- Products -->
+
+        <div class="row border mb-5 border-primary">
+            <div class="col mr-2 py-2 text-center vLightBg border shadow-sm">
+                <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
+                <h3 class="text-uppercase mt-1 mb-0">Emergent</h3>
+                <p class="mb-0">$15.00 <span class="text-muted">USD</span></p>
+            </div>
+            <div class="col mx-2 py-2 text-center vLightBg border shadow-sm">
+                <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
+                <h3 class="text-uppercase mt-1 mb-0">Canopy</h3>
+                <p class="mb-0">$16.00 <span class="text-muted">USD</span></p>
+            </div>
+            <div class="col mx-2 py-2 text-center vLightBg border shadow-sm">
+                <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
+                <h3 class="text-uppercase mt-1 mb-0">Understory</h3>
+                <p class="mb-0">$15.00 <span class="text-muted">USD</span></p>
+            </div>
+            <div class="col ml-2 py-2 text-center vLightBg border shadow-sm">
+                <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
+                <h3 class="text-uppercase mt-1 mb-0">Sunrise</h3>
+                <p class="mb-0">$18.00 <span class="text-muted">USD</span></p>
+            </div>
+        </div>
+
     </div>
 
     <!-- <div class="row featurette mx-5">
@@ -160,6 +196,7 @@
         </div>
     </div> -->
 
+    <!-- Merch CTA  -->
     
     <div class="container-fluid merch-bg">
         <div class="row mx-5">
@@ -200,6 +237,7 @@
                     </svg>
                 </a>
                 <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Coffeebara Cafe</span>
+                <div class="fa-brands fa-github-square"></div>
             </div>
     
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
