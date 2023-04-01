@@ -8,15 +8,16 @@
     <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 
     <!-- Font Awesome -->
 
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open_Sans" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
     
     <!-- Custom CSS-->
 
@@ -33,7 +34,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
             <a class="navbar-brand text-uppercase font-weight-bold" href="#">
-                <img src="img/logo-nav-test.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
+                <img src="img/logo-nav-test-2.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
                 CoffeeBara <span class="font-weight-light">Café</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -47,7 +48,7 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">About</a>
@@ -56,7 +57,7 @@
                         <a class="nav-link" href="#">Rewards</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">Gift Cards</a>
@@ -91,35 +92,95 @@
 
 <!-- Section 1 -->
 
-<div class="container">
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <h3 class="mb-0">Featured post</h3>
+                <div class="mb-1 text-muted">Nov 12</div>
+                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                    additional content.</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="mb-0">Post title</h3>
+                <div class="mb-1 text-muted">Nov 11</div>
+                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
+                    content.</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- <div class="container-fluid merch-bg">
+    <div class="row">
+        <div class="row">
+            <div class="col col-5">
+                <img class="img-fluid " src="http://via.placeholder.com/500x600" alt="coffeebara shirt" >
+            </div>
+            <div class="col-md-4 ml-6 align-self-center my-4 ml-3 mr-5 p-3">
+                <h2 class="featurette-heading">Check out our <span class="text-muted">Merch.</span></h2>
+                <p class="lead">And yes, this is the last block of representative placeholder content. Again,
+                    not really intended to be actually read, simply here to give you a better view of what
+                    this would look like with some actual content. Your content.</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="container">
     <div class="row">
         <div class="col">
                 <li class="media"">
                     <img class="" src="http://via.placeholder.com/500x400" class="mr-3" alt="...">
                     <div class="media-body align-self-center col-6">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
-                        <p>All my girls vintage Chanel baby. So you can have your cake. Tonight, tonight, tonight, I'm walking on
-                            air. Slowly swallowing down my fear, yeah yeah. Growing fast into a bolt of lightning. So hot and heavy,
-                            'Til dawn. That fairy tale ending with a knight in shining armor. Heavy is the head that wears the
-                            crown.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, harum sed mollitia adipisci temporibus vitae
+                            corporis dolorem ipsum itaque quos magnam optio repellat enim odio saepe esse. Animi, laboriosam quod.</p>
                     </div>
                 </li>
                 <li class="media ">
                     <img src="http://via.placeholder.com/500x400" class="order-last ml-3" alt="..." >
                     <div class="media-body align-self-center">
                         <h5 class="mt-0 mb-1">List-based media object</h5>
-                        <p>Maybe a reason why all the doors are closed. Cause once you're mine, once you’re mine. Be your teenage
-                            dream tonight. Heavy is the head that wears the crown. It's not even a holiday, nothing to celebrate. A
-                            perfect storm, perfect storm.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, harum sed mollitia adipisci temporibus vitae
+                            corporis dolorem ipsum itaque quos magnam optio repellat enim odio saepe esse. Animi, laboriosam quod.</p>
                     </div>
                 </li>
         </div>
     </div>
-</div>
+</div> -->
 
 <hr />
 
-<h4 class="text-center text-uppercase font-weight-bold my-5 ">Good Coffee, <span class="text-muted">For People & Planet</span></h4>
+<h4 class="text-center text-uppercase font-weight-bold my-5 ">Good Coffee, <span class="text-muted">For People & The Planet</span></h4>
     <div class="container my-5">
         <div class="row text-center"> <!-- 12 grids to use -->
             <div class="col col-sm-3">
@@ -134,12 +195,12 @@
             </div>
             <div class="col col-sm-3">
                 <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 3"/>
-                    <h5>Roasted</h5>
+                    <h5>Brewed</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
                 <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 4"/>
-                    <h5>Roasted</h5>
+                    <h5>Shared</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
         </div>
@@ -150,36 +211,46 @@
     <div class="container"> <!-- Title -->
         <div class="row">
             <div class="col text-center font-weight-bold">
-                <h2 class="display-2 text-uppercase">Brew Boldly</h2>
+                <h2 class="display-2 font-weight-bold text-uppercase">Brew Boldly</h2>
                 <p class="text-muted">With Our Signature Blends</p>
             </div>
         </div>
 
         <!-- Products -->
-
+    <div class="container">
         <div class="row border mb-5 border-primary">
-            <div class="col mr-2 py-2 text-center vLightBg border shadow-sm">
+            <div class="col mx-2 my-2 py-2 text-center vLightBg border shadow-sm">
                 <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
                 <h3 class="text-uppercase mt-1 mb-0">Emergent</h3>
                 <p class="mb-0">$15.00 <span class="text-muted">USD</span></p>
             </div>
-            <div class="col mx-2 py-2 text-center vLightBg border shadow-sm">
+            <div class="col mx-2 my-2 py-2 text-center vLightBg border shadow-sm">
                 <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
                 <h3 class="text-uppercase mt-1 mb-0">Canopy</h3>
                 <p class="mb-0">$16.00 <span class="text-muted">USD</span></p>
             </div>
-            <div class="col mx-2 py-2 text-center vLightBg border shadow-sm">
+            <div class="col mx-2 my-2 py-2 text-center vLightBg border shadow-sm">
                 <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
                 <h3 class="text-uppercase mt-1 mb-0">Understory</h3>
                 <p class="mb-0">$15.00 <span class="text-muted">USD</span></p>
             </div>
-            <div class="col ml-2 py-2 text-center vLightBg border shadow-sm">
+            <div class="col mx-2 my-2 py-2 text-center vLightBg border shadow-sm">
                 <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
                 <h3 class="text-uppercase mt-1 mb-0">Sunrise</h3>
                 <p class="mb-0">$18.00 <span class="text-muted">USD</span></p>
             </div>
         </div>
-
+    </div>
+        <div class="row">
+            <div class="col-6 mx-auto text-center">
+                <p class="text-center text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci atque porro aliquam ducimus,
+                    incidunt veniam excepturi illo cum assumenda suscipit, architecto eos autem asperiores?
+                </p>
+                <button type="button" class="btn btn-primary d-flex justify-content-center d-md-table mx-auto mb-5"> <!-- new item flair -->
+                    OUR COFFEES >
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- <div class="row featurette mx-5">
@@ -199,13 +270,13 @@
     <!-- Merch CTA  -->
     
     <div class="container-fluid merch-bg">
-        <div class="row mx-5">
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <div class="row">
+            <div class="col my-auto mx-auto">
+                <img class="img-fluid py-3" src="img/cb_shirt_web_ns.png" alt="coffeebara shirt" height="500px" width="auto">
             </div>
-            <div class="col-md-7 ml-6 align-self-center p-3">
-                <div class="btn-dark col-1 col-md-2 mx-1 rounded shadow-sm mb-3"> <!-- new item flair -->
-                    <p class="text-center text-align-center">New!</p>
+            <div class="col-md-7 ml-6 align-self-center my-4 ml-3 mr-5 p-3">
+                <div class="btn btn-primary mb-3"> <!-- new item flair -->
+                    <p class="mb-0">New!</p>
                 </div>
                 <h2 class="featurette-heading">Check out our <span class="text-muted">Merch.</span></h2>
                 <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
@@ -213,33 +284,60 @@
             </div>
         </div>
     </div>
+
     <!-- Social -->
-    
+    <!-- Need to figure out how to disable text when breakpoint happens for smaller mobile size -->
+
     <div class="container-fluid bg-primary">
-        <div class="row">
-            <img src="http://via.placeholder.com/100x100" href="#" alt="instagram icon"/>
-                <div class="col-md-3 text-white">
-                        <h2>#CAPYNOTCRAPPY</h2>
-                        <h3>@coffeebara</h3>
+        <div class="row text-white mx-5 text-center">
+
+            <div class="col-sm-4 my-4">
+                <div class="fa-brands fa-facebook fa-4x"></div> <!-- Icon -->
+                <div class="d-inline-block mb-0"> <!-- Text container -->
+                    <h3 class="font-weight-bold mb-0">FOLLOW US</h3>
+                    <h5 class="font-weight-light">COFFEEBARACAFE</h5>
                 </div>
+            </div>
+
+            <div class="col-sm-4 my-4">
+                <div class="fa-brands fa-instagram fa-4x"></div> <!-- Icon -->
+                <div class="d-inline-block mb-0"> <!-- Text container -->
+                    <h3 class="font-weight-bold mb-0">#BARABREW</h3>
+                    <h5 class="font-weight-light">@COFFEEBARACAFE</h5>
+                </div>
+            </div>
+
+            <div class="col-sm-4 my-4">
+                <div class="fa-brands fa-twitter fa-4x"></div> <!-- Icon -->
+                <div class="d-inline-block mb-0"> <!-- Text container -->
+                    <h3 class="font-weight-bold mb-0">SIP & TWEET</h3>
+                    <h5 class="font-weight-light">@COFFEEBARACAFE</h5>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    
 <hr />
 
     <!-- Footer -->
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<!-- Footer needs to be redone -->
+
+    <footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top">
         <div class="container-fluid">
-            <div class="col-md-4 d-flex align-items-center">
+            <div class="col-md-6 d-flex align-items ">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                     <svg class="bi" width="30" height="24">
                         <use xlink:href="#bootstrap"></use>
                     </svg>
                 </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Coffeebara Cafe</span>
-                <div class="fa-brands fa-github-square"></div>
+                <span class="mb mb-md-0 text-body-secondary">© 2023 Coffeebara Cafe </span>
+                <div class="fa-brands fa-facebook ml-2"></div>
+                <div class="fa-brands fa-instagram mx-2"></div>
+                <div class="fa-brands fa-twitter mx-2"></div>
             </div>
-    
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
                             <use xlink:href="#twitter"></use>
@@ -263,3 +361,16 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+<!-- Card to Use Later -->
+
+<!-- 
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="http://via.placeholder.com/200x300" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>  -->
