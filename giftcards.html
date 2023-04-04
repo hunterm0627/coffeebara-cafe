@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS-->
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
+
+    <title>CoffeeBara Café</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand text-uppercase font-weight-bold" href="#">
+                <img src="img/logo-nav-test-2.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
+                CoffeeBara <span class="font-weight-light">Café</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="rewards.html">Rewards</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav-link font-weight-bold" href="#">Gift Cards<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+                <!-- Submit and Sign Up -->
+                
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-primary mr-3 my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="mb-4 font-weight-bold">Give the Gift of Choice</h1>
+            <p class="lead mb-4">Looking for the perfect gift for that special someone? Look no further than our digital
+                gift cards!</p>
+            <p class="mb-4">With our gift cards, your recipient can choose from a wide selection of products and
+                services, ensuring that they get exactly what they want. Plus, our digital gift cards are easy to use
+                and can be redeemed online or in-store.</p>
+
+            <h2 class="mb-4">Select Gift Card Amount</h2>
+
+            <div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+
+                <label for="25" class="btn btn-outline-primary btn-lg">
+                    <input type="radio" name="cardAmount" id="25" value="25" autocomplete="off" onclick="changeText('$25')" checked=""> $25
+                </label>
+                <label for="50" class="btn btn-outline-primary btn-lg">
+                    <input type="radio" name="cardAmount" id="50" value="50" autocomplete="off" onclick="changeText('$50')"> $50
+                </label>
+                <label for="75" class="btn btn-outline-primary btn-lg">
+                    <input type="radio" name="cardAmount" id="75" value="75" autocomplete="off" onclick="changeText('$75')"> $75
+                </label>
+                <label for="100" class="btn btn-outline-primary btn-lg">
+                    <input type="radio" name="cardAmount" id="100" value="100" autocomplete="off" onclick="changeText('$100')"> $100
+                </label>
+                <button type="submit" class="btn btn-success" name="giftCardSubmit">Submit</button>
+            </div>
+
+            <!-- <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="form-check form-check-inline mb-3">
+                        <input class="form-check-input" type="radio" name="giftCardAmount" id="giftCardAmount25"
+                            value="25">
+                        <label class="form-check-label" for="giftCardAmount25">$25</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-3">
+                        <input class="form-check-input" type="radio" name="giftCardAmount" id="giftCardAmount50"
+                            value="50">
+                        <label class="form-check-label" for="giftCardAmount50">$50</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-3">
+                        <input class="form-check-input" type="radio" name="giftCardAmount" id="giftCardAmount75"
+                            value="75">
+                        <label class="form-check-label" for="giftCardAmount75">$75</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-3">
+                        <input class="form-check-input" type="radio" name="giftCardAmount" id="giftCardAmount100"
+                            value="100">
+                        <label class="form-check-label" for="giftCardAmount100">$100</label>
+                    </div>
+                    <a href="#" class="btn btn-primary">Submit</a>
+                </div>
+            </div> -->
+
+        </div>
+        <div class="col py-5">
+            <div class="col d-flex justify-content-center align-items-center">
+                <p class="giftCardTxt position-absolute" id="giftAmount">$25</p>
+                <img src="https://via.placeholder.com/600x400" class="giftCard img-fluid shadow-lg" alt="Gift Card Image">
+            </div>
+        </div>
+        <!-- <div class="col d-flex justify-content-center">
+            <div class="row">
+                <img src="https://via.placeholder.com/600x400" alt="Gift Card Image" class="img-fluid shadow">
+                <p class="carousel-caption display-1 font-weight-bold mb-0">$25</p>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<hr/>
+
+
+
+<footer class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="mb-3">About Us</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="mb-3">Navigation</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Home</a></li>
+                    <li><a href="#" class="text-white">Menu</a></li>
+                    <li><a href="#" class="text-white">About</a></li>
+                    <li><a href="#" class="text-white">Rewards</a></li>
+                    <li><a href="#" class="text-white">Contact</a></li>
+
+              </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="mb-3">Follow Us</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook ml-2"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram mx-2"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-twitter mx-2"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-youtube mx-2"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <p class="text-center">&copy; 2023 My Coffee Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top">
+<div class="container-fluid">
+<div class="col-md-6 d-flex align-items ">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
+    </a>
+    <span class="mb mb-md-0 text-body-secondary">© 2023 Coffeebara Cafe </span>
+    <div class="fa-brands fa-facebook ml-2"></div>
+    <div class="fa-brands fa-instagram mx-2"></div>
+    <div class="fa-brands fa-twitter mx-2"></div>
+</div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+            </svg></a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+            </svg></a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+            </svg></a></li>
+</ul>
+</div>
+
+    
+
+<!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+
+</footer>

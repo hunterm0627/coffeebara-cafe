@@ -6,24 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-
     <!-- Font Awesome -->
-
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
-    
     <!-- Custom CSS-->
-
     <link rel="stylesheet" href="css/styles.css" />
-
-    <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
 
     <title>CoffeeBara Café</title>
 
@@ -45,29 +37,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link  font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Rewards</a>
+                        <a class="nav-link" href="rewards.html">Rewards</a>
                     </li>
                     <li>
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Gift Cards</a>
+                        <a class="nav-link" href="giftcards.html">Gift Cards</a>
                     </li>
                 </ul>
 
                 <!-- Submit and Sign Up -->
                 
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary mr-3 my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button class="btn btn-outline-primary mr-3 my-2 my-sm-0" type="submit">Sign In</button>
                     <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</button>
                 </form>
             </div>
@@ -80,11 +72,12 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col col-md-8 text-white">
-                    <h1 class="display-1 font-weight-bold text-uppercase">Life is Better <br />With Coffee</h1>
+                    <h1 class="display-1 font-weight-bold text-uppercase">Life is Better <br />With Coffee!</h1>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ut dolores sequi, quia quos ratione voluptatem laborum repellat odit nemo.</p>
                     <button type="button" href="#" class="btn btn-danger btn-lg px-5 py-3 mt-3">
                         Learn More!
                     </button>
+                    <!-- <img class="cover" src="img/coffee_bg_01.jpg" style="fill" alt=""> -->
                 </div>
             </div>
         </div>
@@ -269,25 +262,6 @@
 
     <!-- Merch CTA  -->
     
-    <div class="container-fluid merch-bg">
-        <div class="row">
-            <div class="col my-auto mx-auto">
-                <img class="img-fluid py-3" src="img/cb_shirt_web_ns.png" alt="coffeebara shirt" height="500px" width="auto">
-            </div>
-            <div class="col-md-7 ml-6 align-self-center my-4 ml-3 mr-5 p-3">
-                <div class="btn btn-primary mb-3"> <!-- new item flair -->
-                    <p class="mb-0">New!</p>
-                </div>
-                <h2 class="featurette-heading">Check out our <span class="text-muted">Merch.</span></h2>
-                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-                <a class="" href="#">SHOP NOW ></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Social -->
-    <!-- Need to figure out how to disable text when breakpoint happens for smaller mobile size -->
-
     <div class="container-fluid bg-primary">
         <div class="row text-white mx-5 text-center">
 
@@ -317,48 +291,79 @@
 
         </div>
     </div>
+    <div class="container-fluid merch-bg">
+        <div class="row">
+            <div class="col my-5 ">
+                <img class="w-75 " src="img/cb_shirt_web_ns.png" alt="coffeebara shirt">
+            </div>
+            <div class="col-md-7 ml-6 my-4 ml-3 mr-5 p-3">
+                <div class="btn btn-primary"> <!-- new item flair -->
+                    <p class="mb-0">New!</p>
+                </div>
+                <h2 class="featurette-heading mt-4">Check out our <span class="text-muted">Merch.</span></h2>
+                <p class="lead pl-0 col-9">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                <a class="" href="#">SHOP NOW ></a>
+            </div>
+        </div>
+    </div>
 
-    
-<hr />
+    <!-- Social -->
+    <!-- Need to figure out how to disable text when breakpoint happens for smaller mobile size -->
 
-    <!-- Footer -->
+<!-- Footer -->
 
 <!-- Footer needs to be redone -->
-
-    <footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top">
-        <div class="container-fluid">
-            <div class="col-md-6 d-flex align-items ">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb mb-md-0 text-body-secondary">© 2023 Coffeebara Cafe </span>
-                <div class="fa-brands fa-facebook ml-2"></div>
-                <div class="fa-brands fa-instagram mx-2"></div>
-                <div class="fa-brands fa-twitter mx-2"></div>
-            </div>
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
+<footer class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row justify-content-center text-center">
+                    <div class="col-8 mb-3 py-4">
+                        <h3>Want to Reserve a Study Room?</h3>
+                        <p class="">If you're interestd in one of our premium study rooms and would like to find out some more information, one of our advisors is excited to help!</p>
+                        <button class="btn btn-primary btn-lg">Get Started</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row py-4 justify-content-center text-center">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mr-5"><img src="img/logo-nav-test-2.svg" alt="CoffeeBara Logo" width="150px"></div>
+                    <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 ">
+                        <h6>ABOUT</h6>
+                        <p class="mb-0">Our Why</p>
+                        <p class="mb-0">Our Work</p>
+                        <p class="mb-0">Careers</p>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 text">
+                        <h6>SUPPORT</h6>
+                        <p class="mb-0">Support Request</p>
+                        <p class="mb-0">Contact</p>
+                    </div>
+                    <div class="col-sm-3 col-md-2 col-lg-2">
+                        <h6>FOLLOW US</h6>
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
         </div>
+    </div>
+</div class="bg-primary">
 
+    <hr />
 
-        
-    </footer>
+    <div class="d-flex justify-content-between">
+        <p class="mb-0 text-left">&copy; 2023 CoffeeBara Cafe | All rights reserved.</p>
+        <p class="mb-0 text-right">Privacy Policy</p>
+    </div>
+</footer>
     
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
