@@ -1,6 +1,8 @@
-/* a {
-    border: solid 1px red;
+/* * {
+    border: dotted 1px rgb(30, 0, 255);
 } */
+
+/* above style will outline all el */
 
 body {
     background-color: #F7F7F7;
@@ -10,6 +12,8 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
 }
+
+
 
 .rewardBanner {
     background-color: #162731;
