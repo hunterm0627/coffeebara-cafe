@@ -14,20 +14,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>CoffeeBara Café</title>
+    <link rel="icon" type="image" href="favicon.png" />
 
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-light navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand text-uppercase font-weight-bold" href="#">
                 <img src="img/logo-nav-test-2.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
-                CoffeeBara <span class="font-weight-light">Café</span>
+                <span>CoffeeBara </span><span class="text-primary">Café</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,34 +41,123 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link  font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link" href="rewards.html">Rewards</a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link" href="giftcards.html">Gift Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
 
-                <!-- Submit and Sign Up -->
+                <!-- Submit and Sign Up Buttons -->
                 
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary mr-3 my-2 my-sm-0" type="submit">Sign In</button>
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button class="btn btn-sm btn-outline-primary mr-3 my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
+                    <button class="btn btn-sm btn-primary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
                 </form>
+
             </div>
         </div>
     </nav>
+
+    <!-- Sign In and Sign Up Modals -->
+
+    <!-- Sign In Modal -->
+
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="signInEmail">Email address</label>
+                        <input type="email" class="form-control" id="signInEmail" aria-describedby="signInEmailHelp" placeholder="Enter email">
+                        <small id="signInEmailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Sign In</button>
+
+                    <div class="mt-3 text-center">
+                    Already have an account?<a href="#signUpModal" data-toggle="modal" data-dismiss="modal" class="text-success"> Sign in</a>
+                    <p class="textSm text-muted mt-2">Click "Sign Up" to agree to CoffeeBara's <a href="#">Terms of Service</a> and acknowledge that CoffeeBara's <a href="#">Privacy Policy</a> applies to you.</p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="signUpModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label for="signUpName">Full Name</label>
+                        <input type="text" class="form-control" id="signUpName" placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email address</label>
+                        <input type="email" class="form-control" id="signUpEmail" aria-describedby="signUpEmailHelp" placeholder="Enter email">
+                        <small id="signUpEmailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpConfirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+
+                    <div class="mt-3 text-center">
+                        Already have an account?<a href="#signUpModal" data-toggle="modal" data-dismiss="modal" class="text-success"> Sign in</a>
+                        <p class="textSm text-muted mt-2">Click "Sign Up" to agree to CoffeeBara's <a href="#">Terms of Service</a> and acknowledge that CoffeeBara's <a href="#">Privacy Policy</a> applies to you.</p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Jumbotron -->
 
@@ -74,7 +167,7 @@
                 <div class="col col-md-8 text-white">
                     <h1 class="display-1 font-weight-bold text-uppercase">Life is Better <br />With Coffee!</h1>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ut dolores sequi, quia quos ratione voluptatem laborum repellat odit nemo.</p>
-                    <button type="button" href="#" class="btn btn-danger btn-lg px-5 py-3 mt-3">
+                    <button type="button" href="#" class="btn btn-success btn-lg px-5 py-3 mt-3 shadow">
                         Learn More!
                     </button>
                     <!-- <img class="cover" src="img/coffee_bg_01.jpg" style="fill" alt=""> -->
@@ -85,17 +178,15 @@
 
 <!-- Section 1 -->
 
-<div class="row mb-2">
-    <div class="col-md-6">
+<!-- <div class="row mb-2"> -->
+    <!-- <div class="col-md-6">
         <div
             class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
                 <h3 class="mb-0">Featured post</h3>
                 <div class="mb-1 text-muted">Nov 12</div>
                 <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
                     additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -104,7 +195,6 @@
                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
                         dy=".3em">Thumbnail</text>
                 </svg>
-
             </div>
         </div>
     </div>
@@ -112,12 +202,10 @@
         <div
             class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success">Design</strong>
                 <h3 class="mb-0">Post title</h3>
                 <div class="mb-1 text-muted">Nov 11</div>
                 <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
                     content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -129,9 +217,9 @@
 
             </div>
         </div>
-    </div>
-</div>
-</div>
+    </div> -->
+<!-- </div>
+</div> -->
 <!-- <div class="container-fluid merch-bg">
     <div class="row">
         <div class="row">
@@ -177,22 +265,26 @@
     <div class="container my-5">
         <div class="row text-center"> <!-- 12 grids to use -->
             <div class="col col-sm-3">
-                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 1"/>
+                <i class="fa-solid text-primary fa-2x mb-4 fa-earth-americas"></i>
+                <!-- <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 1"/> -->
                     <h5>Sourced</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
-                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 2"/>
+                <i class="fa-solid text-primary fa-2x mb-4 fa-fire"></i>
+                <!-- <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 2"/> -->
                     <h5>Roasted</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
-                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 3"/>
+                <i class="fa-solid text-primary fa-2x mb-4 fa-mug-hot"></i>
+                <!-- <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 3"/> -->
                     <h5>Brewed</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
             <div class="col col-sm-3">
-                <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 4"/>
+                <i class="fa-solid text-primary fa-2x mb-4 fa-hand-holding-heart"></i>
+                <!-- <img class="mb-3 border border-primary rounded-circle" src="http://via.placeholder.com/100x100" href="#" alt="image 4"/> -->
                     <h5>Shared</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut, dignissimos sunt odio disti</p>
             </div>
@@ -204,14 +296,14 @@
     <div class="container"> <!-- Title -->
         <div class="row">
             <div class="col text-center font-weight-bold">
-                <h2 class="display-2 font-weight-bold text-uppercase">Brew Boldly</h2>
-                <p class="text-muted">With Our Signature Blends</p>
+                <h2 class="display-2 font-weight-bold text-uppercase ">Brew Boldly</h2>
+                <p class="text-muted mt-n3">With Our Signature Blends</p>
             </div>
         </div>
 
         <!-- Products -->
     <div class="container">
-        <div class="row border mb-5 border-primary">
+        <div class="row mb-5 border-primary">
             <div class="col mx-2 my-2 py-2 text-center vLightBg border shadow-sm">
                 <img class="coffeeBagThumbnail" src="http://via.placeholder.com/200x300" alt="Emergent Coffee Bag" />
                 <h3 class="text-uppercase mt-1 mb-0">Emergent</h3>
@@ -239,7 +331,7 @@
                 <p class="text-center text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta adipisci atque porro aliquam ducimus,
                     incidunt veniam excepturi illo cum assumenda suscipit, architecto eos autem asperiores?
                 </p>
-                <button type="button" class="btn btn-primary d-flex justify-content-center d-md-table mx-auto mb-5"> <!-- new item flair -->
+                <button type="button" class="btn btn-outline-primary d-flex justify-content-center d-md-table mx-auto mb-5"> <!-- new item flair -->
                     OUR COFFEES >
                 </button>
             </div>
@@ -263,46 +355,46 @@
     <!-- Merch CTA  -->
     
     <div class="container-fluid bg-primary">
-        <div class="row text-white mx-5 text-center">
+        <div class="row text-white mx-5 py-3 text-left justify-content-center">
 
-            <div class="col-sm-4 my-4">
-                <div class="fa-brands fa-facebook fa-4x"></div> <!-- Icon -->
-                <div class="d-inline-block mb-0"> <!-- Text container -->
-                    <h3 class="font-weight-bold mb-0">FOLLOW US</h3>
+            <div class="col-xs-3 my-1 mx-2">
+                <div class="fa-brands fa-facebook fa-3x"></div> <!-- Icon -->
+                <div class="d-inline-block mb-0 txtRespo"> <!-- Text container -->
+                    <h5 class="font-weight-bold mb-0">FOLLOW US</h5>
                     <h5 class="font-weight-light">COFFEEBARACAFE</h5>
                 </div>
             </div>
 
-            <div class="col-sm-4 my-4">
-                <div class="fa-brands fa-instagram fa-4x"></div> <!-- Icon -->
-                <div class="d-inline-block mb-0"> <!-- Text container -->
-                    <h3 class="font-weight-bold mb-0">#BARABREW</h3>
+            <div class="col-xs-3 my-1 mx-2">
+                <div class="fa-brands fa-instagram fa-3x"></div> <!-- Icon -->
+                <div class="d-inline-block mb-0 txtRespo"> <!-- Text container -->
+                    <h5 class="font-weight-bold mb-0">#BARABREW</h5>
                     <h5 class="font-weight-light">@COFFEEBARACAFE</h5>
                 </div>
             </div>
 
-            <div class="col-sm-4 my-4">
-                <div class="fa-brands fa-twitter fa-4x"></div> <!-- Icon -->
-                <div class="d-inline-block mb-0"> <!-- Text container -->
-                    <h3 class="font-weight-bold mb-0">SIP & TWEET</h3>
+            <div class="col-xs-3 my-1 mx-2">
+                <div class="fa-brands fa-twitter fa-3x"></div> <!-- Icon -->
+                <div class="d-inline-block mb-0 txtRespo"> <!-- Text container -->
+                    <h5 class="font-weight-bold mb-0">SIP & TWEET</h5>
                     <h5 class="font-weight-light">@COFFEEBARACAFE</h5>
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="container-fluid merch-bg">
-        <div class="row">
-            <div class="col my-5 ">
-                <img class="w-75 " src="img/cb_shirt_web_ns.png" alt="coffeebara shirt">
-            </div>
-            <div class="col-md-7 ml-6 my-4 ml-3 mr-5 p-3">
+    <div class="container container-fluid">
+        <div class="row mb-5">
+            <div class="col-12 col-md col-lg-6 my-4 mx-4 p-3">
                 <div class="btn btn-primary"> <!-- new item flair -->
                     <p class="mb-0">New!</p>
                 </div>
                 <h2 class="featurette-heading mt-4">Check out our <span class="text-muted">Merch.</span></h2>
-                <p class="lead pl-0 col-9">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                <p class="lead mr-5">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
                 <a class="" href="#">SHOP NOW ></a>
+            </div>
+            <div class="col d-flex justify-content-center align-self-center">
+                <img class="merchImg img-fluid my-5" style="max-width: 350px;"src="img/cb_shirt_web_ns.png" alt="coffeebara shirt">
             </div>
         </div>
     </div>
@@ -313,18 +405,26 @@
 <!-- Footer -->
 
 <!-- Footer needs to be redone -->
-<footer class="bg-light py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="row justify-content-center text-center">
-                    <div class="col-8 mb-3 py-4">
-                        <h3>Want to Reserve a Study Room?</h3>
-                        <p class="">If you're interestd in one of our premium study rooms and would like to find out some more information, one of our advisors is excited to help!</p>
-                        <button class="btn btn-primary btn-lg">Get Started</button>
-                    </div>
+<div class="container-fluid bg-primary text-white ">
+    <div class="row">
+        <div class="col">
+            <div class="row justify-content-center text-center">
+                <div class="col-8 mb-3 py-4">
+                    <i class="fa-solid fa-3x fa-calendar-check mb-2"></i>
+                    <h3>Want to Reserve a Study Room?</h3> 
+                    <p class="lead">If you're interestd in one of our premium study rooms and would like to find out some more information, one of our advisors is excited to help!</p>
+                    <button class="btn btn-success shadow btn-lg">Get Started!</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<footer class="bg-light py-3">
                 <hr />
+                <div class="container">
                 <div class="row py-4 justify-content-center text-center">
                     <div class="col-sm-3 col-md-2 col-lg-2 mr-5"><img src="img/logo-nav-test-2.svg" alt="CoffeeBara Logo" width="150px"></div>
                     <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 ">
@@ -347,16 +447,18 @@
                         </ul>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </div class="bg-primary">
 
     <hr />
 
-    <div class="d-flex justify-content-between">
-        <p class="mb-0 text-left">&copy; 2023 CoffeeBara Cafe | All rights reserved.</p>
-        <p class="mb-0 text-right">Privacy Policy</p>
+    <div class="d-flex justify-content-around">
+        <p class="mb-0  text-left">&copy; 2023 CoffeeBara Cafe | All rights reserved.</p>
+        <p class="mb-0  text-right">Privacy Policy</p>
     </div>
+    
 </footer>
     
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
@@ -364,18 +466,18 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
-</body>
 </html>
 
 
 <!-- Card to Use Later -->
 
-<!-- 
-<div class="card" style="width: 18rem;">
+
+<!-- <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="http://via.placeholder.com/200x300" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+    
   </div>  -->

@@ -6,213 +6,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-
     <!-- Font Awesome -->
-
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Custom CSS-->
-
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
-
     <title>CoffeeBara Café</title>
+    <link rel="icon" type="image" href="favicon.png" />
 
 </head>
 
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container">
-        <a class="navbar-brand text-uppercase font-weight-bold" href="#">
-            <img src="img/logo-nav-test-2.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
-            CoffeeBara <span class="font-weight-light">Café</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-uppercase font-weight-bold" href="#">
+                <img src="img/logo-nav-test-2.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
+                <span>CoffeeBara </span><span class="text-primary">Café</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" href="#">Menu<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rewards.html">Rewards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="giftcards.html">Gift Cards</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" href="#">Menu <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="giftcards.html">Gift Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
 
-            <!-- Submit and Sign Up -->
-            
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-primary mr-3 my-2 my-sm-0" type="submit">Sign Up</button>
-                <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</button>
-            </form>
+                <!-- Submit and Sign Up Buttons -->
+                
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-sm btn-outline-primary mr-3 my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
+                    <button class="btn btn-sm btn-primary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sign In and Sign Up Modals -->
+
+    <!-- Sign In Modal -->
+
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="signInEmail">Email address</label>
+                        <input type="email" class="form-control" id="signInEmail" aria-describedby="signInEmailHelp" placeholder="Enter email">
+                        <small id="signInEmailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Sign In</button>
+
+                    <div class="mt-3 text-center">
+                    Already have an account?<a href="#signUpModal" data-toggle="modal" data-dismiss="modal" class="text-success"> Sign in</a>
+                    <p class="textSm text-muted mt-2">Click "Sign Up" to agree to CoffeeBara's <a href="#">Terms of Service</a> and acknowledge that CoffeeBara's <a href="#">Privacy Policy</a> applies to you.</p>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
-</nav>
+</div>
+
+<!-- Sign Up Modal -->
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="signUpModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label for="signUpName">Full Name</label>
+                        <input type="text" class="form-control" id="signUpName" placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email address</label>
+                        <input type="email" class="form-control" id="signUpEmail" aria-describedby="signUpEmailHelp" placeholder="Enter email">
+                        <small id="signUpEmailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpConfirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+
+                    <div class="mt-3 text-center">
+                        Already have an account?<a href="#signUpModal" data-toggle="modal" data-dismiss="modal" class="text-success"> Sign in</a>
+                        <p class="textSm text-muted mt-2">Click "Sign Up" to agree to CoffeeBara's <a href="#">Terms of Service</a> and acknowledge that CoffeeBara's <a href="#">Privacy Policy</a> applies to you.</p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Starts -->
 
 <body>
 
-
-    
-
-    <!-- <div class="container">
-        <h1>Our Menu</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Appetizers</h2>
-                <ul>
-                    <li>Spinach and Artichoke Dip</li>
-                    <li>Buffalo Chicken Wings</li>
-                    <li>Mozzarella Sticks</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Entrees</h2>
-                <ul>
-                    <li>Grilled Salmon</li>
-                    <li>Chicken Parmesan</li>
-                    <li>Steak Fajitas</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Sides</h2>
-                <ul>
-                    <li>French Fries</li>
-                    <li>Garlic Mashed Potatoes</li>
-                    <li>Steamed Vegetables</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Desserts</h2>
-                <ul>
-                    <li>Chocolate Cake</li>
-                    <li>Apple Pie</li>
-                    <li>Ice Cream Sundae</li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-    
-    
-    <div class="text-center">
-        <h2 class="display-4 font-weight-bold mb-5">MENU</h2>
-    </div>
-    <i class="fa-brands fa-pagelines fa-2xl d-flex justify-content-center"></i>
-    
     <div class="container">
-        <h2 class="text-primary mt-4">COFFEE + TEA</h2> <!-- Section -->
-        <div class="row">
-            <div class="col-6">
+        <h2 class="display-4 font-weight-bold">MENU </h2>
+        <h2 class="text-primary my-2 text-center my-5">DRINKS</h2> <!-- Section -->
+        <div class="row"> <!-- product  -->
+            
+            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
                 <h3 class="d-flex justify-content-between">
                     <span class="">Iced Coffee</span>
-                    <span class="text-muted">$10</span>
+                    <span  class="text-muted">$10</span>
                 </h3>
                 <p class="menu-item-description">
-                    Hits the spot. Ham, free-range egg, cheddar, chili mayo and pickled onions on a fresh milk bun.
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
                 </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
             </div>
-            <div class="col-6">
+            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
                 <h3 class="d-flex justify-content-between">
-                    <span class="">Coffee 2</span>
-                    <span class="text-muted">$8</span>
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
                 </h3>
                 <p class="menu-item-description">
-                    Hits the spot. Ham, free-range egg, cheddar, chili mayo and pickled onions on a fresh milk bun.
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
                 </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
             </div>
-            <div class="col">
+            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
                 <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee w/ Milk</span>
-                    <span class="">$10</span>
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
                 </h3>
+                <p class="menu-item-description">
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
+            </div>
+            
+            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
+                <h3 class="d-flex justify-content-between">
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
+                </h3>
+                <p class="menu-item-description">
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
+                <h3 class="d-flex justify-content-between">
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
+                </h3>
+                <p class="menu-item-description">
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
+                <h3 class="d-flex justify-content-between">
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
+                </h3>
+                <p class="menu-item-description">
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
+                <h3 class="d-flex justify-content-between">
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
+                </h3>
+                <p class="menu-item-description">
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
+                <h3 class="d-flex justify-content-between">
+                    <span class="">Iced Coffee</span>
+                    <span  class="text-muted">$10</span>
+                </h3>
+                <p class="menu-item-description">
+                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                </div>
             </div>
         </div>
-        <p class="">
-            Hits the spot. Ham, free-range egg, cheddar, chili mayo and pickled onions on a fresh milk bun.
-        </p>
-        <div class="row">
-        </div>
-        <div class="">
-            <div class="">
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Vanilla Latte</span>
-                    <span class="text-muted">$11.50</span>
-                </h3>
-                <p class="">
-                    Corned beef, Swiss, Russian dressing and pickled onions on a milk bun.
-                </p>
+        
+        
+        <!-- Food Section -->
+        <h2 class="text-primary my-5 text-center">SNACKS</h2> <!-- Section -->
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-4 border">  <!-- Product 1 -->
+                    <h3 class="d-flex justify-content-between">
+                        <span class="">Bara-berry Muffin</span>
+                        <span class="text-muted">$4.50</span>
+                    </h3>
+                    <p class="">
+                        Bursting with fresh blueberries and topped with a crumbly streusel topping, our blueberry muffin is
+                        a classic coffee shop snack.
+                    </p>
+                    <div class="d-flex justify-content-between ">
+                        <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                        <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>                             
+                    </div>
+                </div>
+
+                <div class="col-12 p-4 border">  <!-- Product 1 -->
+                    <h3 class="d-flex justify-content-between">
+                        <span class="">Bara-berry Muffin</span>
+                        <span class="text-muted">$4.50</span>
+                    </h3>
+                    <p class="">
+                        Bursting with fresh blueberries and topped with a crumbly streusel topping, our blueberry muffin is
+                        a classic coffee shop snack.
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                        <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>                        
+                    </div>
+                </div>
+                
             </div>
         </div>
 
     <!--Menu List -->
 
 
-    <div class="container">
-        <h2 class="mt-4">COFFEE</h2>
-        <p>This is where the menu items will go eventually...</p>
-        
-        <div class="row mb-3">
-            <div class="col-8 col-md-6">
-                <div class="row">
-                    <div class="col-6">Coffee Item 1</div>
-                    <div class="col-6">$8.30</div>
-                    <p class="col">One of these is the best ever</p>
-                </div>
-            </div>
-            <div class="col-8 col-md-6">
-                <div class="">Coffee Item 2</div>
-                <div class="">$8.30</div>
-            </div>
-        </div>
-        
-        <div class="row mb-3">
-            <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
-            <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
-            <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
-        </div>
-        
-        <div class="row mb-3">
-            <div class="col-md-4 themed-grid-col">.col-md-4</div>
-            <div class="col-md-4 themed-grid-col">.col-md-4</div>
-            <div class="col-md-4 themed-grid-col">.col-md-4</div>
-        </div>
-        
-        <div class="row mb-3">
-            <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
-            <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
-            <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
-        </div>
-        
-        <div class="row mb-3">
-            <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
-            <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
-            <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
-        </div>
-    </div>
+
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -340,21 +443,51 @@
     </div><!-- /.container -->
 
 
-    <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
+ 
 </main>
 
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
 </body>
+<!-- FOOTER -->
+<footer class="bg-light py-3">
+    <hr />
+    <div class="container">
+    <div class="row py-4 justify-content-center text-center">
+        <div class="col-sm-3 col-md-2 col-lg-2 mr-5"><img src="img/logo-nav-test-2.svg" alt="CoffeeBara Logo" width="150px"></div>
+        <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 ">
+            <h6>ABOUT</h6>
+            <p class="mb-0">Our Why</p>
+            <p class="mb-0">Our Work</p>
+            <p class="mb-0">Careers</p>
+        </div>
+        <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 text">
+            <h6>SUPPORT</h6>
+            <p class="mb-0">Support Request</p>
+            <p class="mb-0">Contact</p>
+        </div>
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <h6>FOLLOW US</h6>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div class="bg-primary">
+
+<hr />
+
+<div class="d-flex justify-content-around">
+<p class="mb-0  text-left">&copy; 2023 CoffeeBara Cafe | All rights reserved.</p>
+<p class="mb-0  text-right">Privacy Policy</p>
+</div>
 
 </html>

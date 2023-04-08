@@ -14,19 +14,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>CoffeeBara Café</title>
+    <link rel="icon" type="image" href="favicon.png" />
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand text-uppercase font-weight-bold" href="#">
                 <img src="img/logo-nav-test-2.svg" width="70" height="70" class="d-inline-block align-center ms-n1" alt="...">
-                CoffeeBara <span class="font-weight-light">Café</span>
+                <span>CoffeeBara </span><span class="text-primary">Café</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,34 +41,122 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Menu</a>
+                        <a class="nav-link " href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active font-weight-bold" href="rewards.html">Rewards</a><span class="sr-only">(current)</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" href="#">Rewards <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="giftcards.html">Gift Cards</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
 
-                <!-- Submit and Sign Up -->
+                <!-- Submit and Sign Up Buttons -->
                 
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-primary mr-3 my-2 my-sm-0" type="submit">Sign In</button>
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button class="btn btn-sm btn-outline-primary mr-3 my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
+                    <button class="btn btn-sm btn-primary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
                 </form>
+
             </div>
         </div>
     </nav>
+
+    <!-- Sign In and Sign Up Modals -->
+
+    <!-- Sign In Modal -->
+
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="signInEmail">Email address</label>
+                        <input type="email" class="form-control" id="signInEmail" aria-describedby="signInEmailHelp" placeholder="Enter email">
+                        <small id="signInEmailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Sign In</button>
+
+                    <div class="mt-3 text-center">
+                    Already have an account?<a href="#signUpModal" data-toggle="modal" data-dismiss="modal" class="text-success"> Sign in</a>
+                    <p class="textSm text-muted mt-2">Click "Sign Up" to agree to CoffeeBara's <a href="#">Terms of Service</a> and acknowledge that CoffeeBara's <a href="#">Privacy Policy</a> applies to you.</p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title text-white" id="signUpModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label for="signUpName">Full Name</label>
+                        <input type="text" class="form-control" id="signUpName" placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email address</label>
+                        <input type="email" class="form-control" id="signUpEmail" aria-describedby="signUpEmailHelp" placeholder="Enter email">
+                        <small id="signUpEmailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpConfirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+
+                    <div class="mt-3 text-center">
+                        Already have an account?<a href="#signUpModal" data-toggle="modal" data-dismiss="modal" class="text-success"> Sign in</a>
+                        <p class="textSm text-muted mt-2">Click "Sign Up" to agree to CoffeeBara's <a href="#">Terms of Service</a> and acknowledge that CoffeeBara's <a href="#">Privacy Policy</a> applies to you.</p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="nav rewardBanner sticky-top"> <!-- Change color later -->
         <div class="text-white offset-1">
@@ -126,11 +219,47 @@
         </div>
     </section>
 
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
 </body>
-
     <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2021 Coffee Shop Rewards</p>
+    <footer class="bg-light py-3">
+        <hr />
+        <div class="container">
+        <div class="row py-4 justify-content-center text-center">
+            <div class="col-sm-3 col-md-2 col-lg-2 mr-5"><img src="img/logo-nav-test-2.svg" alt="CoffeeBara Logo" width="150px"></div>
+            <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 ">
+                <h6>ABOUT</h6>
+                <p class="mb-0">Our Why</p>
+                <p class="mb-0">Our Work</p>
+                <p class="mb-0">Careers</p>
+            </div>
+            <div class="d-none d-sm-block col-sm-3 col-md-2 col-lg-2 text">
+                <h6>SUPPORT</h6>
+                <p class="mb-0">Support Request</p>
+                <p class="mb-0">Contact</p>
+            </div>
+            <div class="col-sm-3 col-md-2 col-lg-2">
+                <h6>FOLLOW US</h6>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
+    </div>
+</div>
+</div>
+</div class="bg-primary">
+
+<hr />
+
+<div class="d-flex justify-content-around">
+<p class="mb-0  text-left">&copy; 2023 CoffeeBara Cafe | All rights reserved.</p>
+<p class="mb-0  text-right">Privacy Policy</p>
+</div>
+</html>

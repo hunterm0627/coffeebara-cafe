@@ -2,22 +2,50 @@
     border: dotted 1px rgb(30, 0, 255);
 } */
 
-/* above style will outline all el */
+/* above style will outline all elements */
+/* Add some brand colors later */
+
+:root {
+    --colorMain: #146C94;
+    --colorAccent:  #19A7CE;
+}
+
+/* use var(--name) in the "root" to use global color variable*/
+
+
 
 body {
     background-color: #F7F7F7;
+    font-family: 'Roboto', sans-serif;
 }
 
-h2 {
+h1 {
+    letter-spacing: .1rem;
+}
+
+h1, h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
 }
 
-
+.giftCardShape {
+    background-color: var(--colorMain);
+    /* create an image to go here*/
+    border-radius: 1.3rem;
+}
 
 .rewardBanner {
-    background-color: #162731;
+    background-color: #166d9f;
 }
+
+.txtRespo {
+    /* white-space: normal; */
+}
+
+.textSm {
+    font-size: 0.75rem;
+}
+
 .jumbotron {
     /* height: 90vh; */
     background-blend-mode: multiply;
@@ -43,6 +71,10 @@ h2 {
     background-color: rgb(226, 226, 226);
 }
 
+.merchImg {
+    width: clamp(200px,60vw, 600px);
+}
+
 .vLightBg {
     background-color: rgb(241, 239, 239);
 }
@@ -53,7 +85,8 @@ h2 {
     border:1px solid #dee2e6;
     border-radius:.25rem; */
     max-width:100%;
-    height:auto}
+    height:auto;
+}
 
 .imageNoFlex {
     flex-shrink: 0;
@@ -146,5 +179,31 @@ h2 {
 @media (min-width: 62em) {
     .featurette-heading {
         margin-top: 7rem;
+    }
+}
+
+/* homepage social blade responsive text */
+
+@media (min-width: 576px) {
+    .txtRespo {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .txtRespo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .txtRespo {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .txtRespo {
+        font-size: 2rem;
     }
 }
