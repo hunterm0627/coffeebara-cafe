@@ -28,6 +28,12 @@ h1, h2 {
     font-weight: 900;
 }
 
+/* have to use this otherwise it will apply a box-shadow on SVG */
+
+.svgShadow {
+    filter: drop-shadow(8px 10px 6px rgb(0 0 0 / 0.1));
+}
+
 .giftCardShape {
     background-color: var(--colorMain);
     /* create an image to go here*/
@@ -55,6 +61,30 @@ h1, h2 {
     
     background-size: cover;
     opacity: 98%;
+}
+
+.rewardsJumboGradient {
+    background-image: linear-gradient(to top, #F7F7F7, #007bff);
+    
+}
+
+.rewardsBullet {
+    width: 1rem; /* Set the desired width and height for the circle */
+    height: 1rem;
+    border: 2px solid #007bff; /* Set the desired color and width for the circle outline */
+    border-radius: 50%; /* Set the border radius to 50% to create a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Set the desired font size for the number */
+}
+
+/* .rewardsJumboAlpha  {
+    opacity: .5;
+} */
+
+.rewardCoinHero {
+    max-width: 300px;
 }
 
 .giftCard {
