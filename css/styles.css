@@ -8,10 +8,10 @@
 :root {
     --colorMain: #146C94;
     --colorAccent:  #19A7CE;
+    --colorLight: #e4eef8;
 }
 
 /* use var(--name) in the "root" to use global color variable*/
-
 
 
 body {
@@ -28,10 +28,68 @@ h1, h2 {
     font-weight: 900;
 }
 
+.textLineHeight {
+    line-height: 1.9}
+
+
+/* ANIMATIONS */
+
+
+.btnEase {
+    transition:1000ms;
+}
+
+.btnEase:hover,
+.btnEase:focus-visible {
+    transform: translateY(-0.25rem);
+    transition: transform 250ms;    
+}
+
+.btnEaseModal {
+    transition:1000ms;
+}
+
+.btnEaseModal:hover,
+.btnEaseModal:focus-visible {
+    transform: scale(1.1);
+    transition: transform 250ms;    
+}
+
+.iconEase {
+    transition: transform 0.5s ease-out;
+}
+.iconEase:hover {
+    transform: scale(1.5);
+    transition: 500ms;
+}
+
+.coinEase {
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.coinEase:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+    transform: rotate(5deg);
+}
+
+
 /* have to use this otherwise it will apply a box-shadow on SVG */
+
 
 .svgShadow {
     filter: drop-shadow(8px 10px 6px rgb(0 0 0 / 0.1));
+}
+
+
+/* Image Container */
+
+.image-container {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
 }
 
 .giftCardShape {
@@ -45,7 +103,9 @@ h1, h2 {
 }
 
 .txtRespo {
+
     /* white-space: normal; */
+
 }
 
 .textSm {
@@ -77,6 +137,11 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     font-size: 2rem; /* Set the desired font size for the number */
+}
+
+.rewardsQnA {
+    /* background-color: var(--colorLight); */
+    background-image: linear-gradient(to bottom, #F7F7F7, #e3e9f0);
 }
 
 /* .rewardsJumboAlpha  {
