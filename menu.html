@@ -70,6 +70,25 @@
         </div>
     </nav>
 
+    <!-- Cart Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cartModal">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span id="cartItemCount" class="badge badge-danger">0</span> <!-- Cart count badge -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Sign In and Sign Up Modals -->
 
     <!-- Sign In Modal -->
@@ -156,6 +175,37 @@
         </div>
     </div>
 </div>
+
+<!-- Add to Cart Modal -->
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Cart items will be dynamically added here -->
+                <ul id="cartItems" class="list-group">
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <h4>Total: <span id="cartTotal">$0.00</span></h4>
+                <button type="button" class="btn btn-primary">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add to Cart Buttons -->
+<button class="btn btn-success" data-id="1" data-name="Espresso" data-price="2.50" onclick="addToCart(this)">Add to
+    Cart Test 1</button>
+<button class="btn btn-success" data-id="2" data-name="Latte" data-price="5.50" onclick="addToCart(this)">Add to
+    Cart Test 2</button>
+
 
 <!-- Content Starts -->
 
@@ -342,12 +392,14 @@
                 
             </div>
         </div>
-
-    <!--Menu List -->
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+        
+        <!--Menu List -->
+        
+        <!-- Marketing messaging and featurettes
+            ================================================== -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
+            
+    <h2 class="text-center mt-5 font-weight-light">Indulge in the coffee world, the <span class="text-primary">CoffeeBara</span> way!</h2>
 
     <div class="container marketing mt-5 pt-5">
 
@@ -365,8 +417,13 @@
                 <h2 class="mt-3">Bara Brew</h2>
                 <p class="">Some representative placeholder content for the three columns of text below the carousel. This is the
                     first column.</p>
-                <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
+                    
+                <div class="d-flex justify-content-around">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>                        
+                </div>
+                    <!-- <p><a class="btn btn-primary" href="#">View details &raquo;</a></p> -->
+                </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
@@ -379,7 +436,11 @@
                 <h2 class="mt-3">Grand Cappy</h2>
                 <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
                     column.</p>
-                <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+                <div class="d-flex justify-content-around">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>                        
+                </div>
+                <!-- <p><a class="btn btn-primary" href="#">View details &raquo;</a></p> -->
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
@@ -391,35 +452,46 @@
                 </svg>
 
                 <h2 class="mt-3">Chillin'</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
-                <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
+                    column.</p>
+                <div class="d-flex justify-content-around">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>                        
+                </div>
+                <!-- <p><a class="btn btn-primary" href="#">View details &raquo;</a></p> -->
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
 
         <!-- START THE FEATURETTES -->
 
+
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your
-                    mind.</span></h2>
-                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
-                        prose here.</p>
-                    <div class="fa-solid fa-check"></div>
-                    <p class="lead text-muted">Some great placeholder content for the first featurette here. Imagine some exciting.
-                        Some great placeholder content for the first featurette here. Imagine some exciting.
+        <div class="row shadow">
+            <div class="col-md-7 p-5 ">
+                <h3 class="d-flex justify-content-between">
+                    <span class="">Vanilla Dream</span>
+                    <span class="text-muted">$4.50</span>
+                </h3>
+                <!-- <h2 class="">CoffeeBara Vanilla Dream. <span class="text-muted">It’ll blow your
+                    mind.</span></h2> -->
+                <p class="lead text-muted">It's a dream come true for coffee lovers who appreciate the perfect balance of flavors in a heavenly cup of coffee. Come and enjoy the CoffeeBara Vanilla Dream, and let your taste buds take a delightful journey to coffee bliss!</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>                        
+                </div>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                <img src="img/iced-latte-at-coffee-shop-window.jpg" width="500px" height="500px" class="fit-image" alt="coffee">
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
                     height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
                     preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                        dy=".3em">500x500</text>
-                </svg>
-
+                    dy=".3em">500x500</text>
+                </svg> -->
+                
             </div>
         </div>
 
@@ -480,6 +552,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 </body>
 <!-- FOOTER -->
 <footer class="bg-light py-3">

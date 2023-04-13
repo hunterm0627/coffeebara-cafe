@@ -123,6 +123,11 @@ h1, h2 {
     opacity: 98%;
 }
 
+.rewardsTitle {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
 .rewardsJumboGradient {
     background-image: linear-gradient(to top, #F7F7F7, #007bff);
     
@@ -253,6 +258,32 @@ h1, h2 {
     letter-spacing: -.05rem;
 }
 
+.fit-image {
+    object-fit: cover;
+    /* Crop the image to fit the container */
+    object-position: center center;
+    /* Position the image at the center of the container */
+    width: 100%;
+    /* Set the width to 100% to fill the container horizontally */
+    height: 100%;
+    /* Set the height to 100% to fill the container vertically */
+    position: relative;
+
+    padding-top: 1rem;
+    
+    padding-bottom: 1rem;
+
+}
+
+/* CSS to define the size of the image box */
+.image-box {
+    width: 100%;
+    /* Set the width of the box to 100% */
+    height: 200px;
+    /* Set the height of the box as desired */
+    overflow: hidden;
+    /* Hide any overflow from the image */
+}
 
 /* RESPONSIVE CSS
   -------------------------------------------------- */
