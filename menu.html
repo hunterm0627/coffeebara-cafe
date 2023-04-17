@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" async></script>
 
     <title>CoffeeBara Café</title>
     <link rel="icon" type="image" href="favicon.png" />
@@ -205,6 +206,57 @@
     Cart Test 1</button>
 <button class="btn btn-success" data-id="2" data-name="Latte" data-price="5.50" onclick="addToCart(this)">Add to
     Cart Test 2</button>
+
+    <!-- Cart version 2 WIP -->
+
+    <div class="container cart-items">
+        <h2>CART</h2>
+        <div class="row">
+            <h5 class="col">ITEM</h5>
+            <h5 class="col">PRICE</h5>
+            <h5 class="col">QUANTITY</h5>
+        </div>
+
+        <hr/ >
+
+        <div class="row cart-row align-items-center">
+            <div class="col">
+                <img class="rounded-lg shadow-sm" src="https://unsplash.it/200/200?image=57" width="100" height="100" alt="product photo"/>
+                <span class="ml-3">T-Shirt</span>
+            </div>
+            <div class="col">
+                <span>$19.99</span>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <input type="number" class="form-control col-sm-2 mr-2" value="1">
+                    <button type="button" class="btn btn-danger">REMOVE</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <hr/>
+
+        <div class="text-right">
+            <h5>Total</h5>
+            <span>$39.97</span>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success">PURCHASE</button>
+        </div>
+            
+            <!-- pop up idea-->
+            
+            <!--         
+            <div class="alert alert-danger" role="alert"> 
+                <h4 class="alert-heading">Item Removed!</h4>
+                You have removed an item from the cart.
+                <a href="#" class="alert-link">It contains a link and heading.</a>
+            -->
+
+        </div>
+    </div>
 
 
 <!-- Content Starts -->
