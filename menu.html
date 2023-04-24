@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/scripts.js" async></script>
+    <script src="js/store.js" type="text/javascript" async></script>
 
     <title>CoffeeBara Café</title>
     <link rel="icon" type="image" href="favicon.png" />
@@ -189,62 +189,28 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Cart items will be dynamically added here -->
-                <ul id="cartItems" class="list-group">
-                </ul>
+                <section class="container content-section">
+                 
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">ITEM</span>
+                        <span class="cart-price cart-header cart-column">PRICE</span>
+                        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                    </div>
+                    <div class="cart-items">
+                    </div>
+                </section>
             </div>
             <div class="modal-footer">
-                <h4>Total: <span id="cartTotal">$0.00</span></h4>
-                <button type="button" class="btn btn-primary">Checkout</button>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">Checkout</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Add to Cart Buttons -->
-<button class="btn btn-success" data-id="1" data-name="Espresso" data-price="2.50" onclick="addToCart(this)">Add to
-    Cart Test 1</button>
-<button class="btn btn-success" data-id="2" data-name="Latte" data-price="5.50" onclick="addToCart(this)">Add to
-    Cart Test 2</button>
-
-    <!-- Cart version 2 WIP -->
-
-    <div class="container cart-items">
-        <h2>CART</h2>
-        <div class="row">
-            <h5 class="col">ITEM</h5>
-            <h5 class="col">PRICE</h5>
-            <h5 class="col">QUANTITY</h5>
-        </div>
-
-        <hr/ >
-
-        <div class="row cart-row align-items-center">
-            <div class="col">
-                <img class="rounded-lg shadow-sm" src="https://unsplash.it/200/200?image=57" width="100" height="100" alt="product photo"/>
-                <span class="ml-3">T-Shirt</span>
-            </div>
-            <div class="col">
-                <span>$19.99</span>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <input type="number" class="form-control col-sm-2 mr-2" value="1">
-                    <button type="button" class="btn btn-danger">REMOVE</button>
-                </div>
-            </div>
-        </div>
-        
-
-        <hr/>
-
-        <div class="text-right">
-            <h5>Total</h5>
-            <span>$39.97</span>
-        </div>
-        <div>
-            <button type="button" class="btn btn-success">PURCHASE</button>
-        </div>
             
             <!-- pop up idea-->
             
@@ -264,116 +230,70 @@
 <body>
 
     <div class="container">
+
         <h2 class="display-4 font-weight-bold">MENU </h2>
-        <h2 class="text-primary my-2 text-center my-5">DRINKS</h2> <!-- Section -->
-        <div class="row"> <!-- product  -->
-            
-            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+
+        <h2 class="text-primary my-2 text-center my-5 section-header">DRINKS</h2> <!-- Section -->
+        <section class="container content-section">
+
+            <div class="row shop-items"> <!-- Drink Products  -->  
+
+                <div class="col-xs-1 col-sm-6 mb p-4 border shop-item"> <!-- Product 1 -->
+
+                    <h3 class="d-flex justify-content-between">
+                        <span class="shop-item-title">Iced Coffee</span>
+                        <span class="shop-item-price text-muted">$4</span>
+                    </h3>
+                    <p class="shop-item-details">
+                        A refreshing blend of bold coffee, chilled to perfection and served over ice.
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn px-2 text-danger shadow-sm shop-item-favorite"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                        <button class="btn text-primary shadow-sm px-2 shop-item-button"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+
+                <div class="col-xs-1 col-sm-6 mb p-4 border shop-item"> <!-- Product 2 -->
+
+                    <h3 class="d-flex justify-content-between">
+                        <span class="shop-item-title">Iced Latte</span>
+                        <span class="shop-item-price text-muted">$5</span>
+                    </h3>
+                    <p class="shop-item-details">
+                        A refreshing blend of bold coffee, chilled to perfection and served over ice and more ice.
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn px-2 text-danger shadow-sm shop-item-favorite"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
+                        <button class="btn text-primary shadow-sm px-2 shop-item-button"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
+                    </div>
                 </div>
+
+                <section class="container content-section">
+                    <h2 class="section-header">DRINKS</h2>
+                    <div class="shop-items">
+                        <div class="shop-item">
+                            <span class="shop-item-title">Iced Coffee</span>
+                            
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">$9.99</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="shop-item">
+                            <span class="shop-item-title">Bara Brew</span>
+                            
+                            <div class="shop-item-details">
+                                <span class="shop-item-price">$6.99</span>
+                                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
-            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
-                </div>
-            </div>
-            
-            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
-                </div>
-            </div>
-            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
-                </div>
-            </div>
-            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
-                </div>
-            </div>
-            <div class="col-xs-1 col-sm-6 mb p-4 border"> <!-- Product 1 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
-                </div>
-            </div>
-            <div class="col-xs-1 col-sm-6 mb p-4 border">  <!-- Product 2 -->
-                <h3 class="d-flex justify-content-between">
-                    <span class="">Iced Coffee</span>
-                    <span  class="text-muted">$10</span>
-                </h3>
-                <p class="menu-item-description">
-                    A refreshing blend of bold coffee, chilled to perfection and served over ice.
-                </p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn px-2 text-danger shadow-sm"><i class="fa-regular fa-lg fa-heart"></i> favorite</button>
-                    <button class="btn text-primary shadow-sm px-2"><i class="fa-solid fa-lg fa-cart-plus"></i> add</button>       
-                </div>
-            </div>
-        </div>
+
+        </section>
+        
         
         
         <!-- Food Section -->
@@ -444,6 +364,7 @@
                 
             </div>
         </div>
+    </div>
         
         <!--Menu List -->
         
@@ -596,15 +517,12 @@
     </div><!-- /.container -->
 
 
- 
-</main>
-
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/61edd0e561.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/store.js" type="text/javascript" async></script>
 </body>
 <!-- FOOTER -->
 <footer class="bg-light py-3">
