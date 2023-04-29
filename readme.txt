@@ -1,3 +1,0 @@
-Readme is a work in progress...
-
-This is a website for a fictional coffeeshop named CoffeeBara Cafe.
