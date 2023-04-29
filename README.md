@@ -1,9 +1,10 @@
+<p align="center">
+  <img src="img/cbLogo_readme.svg" width="400px" />
+</p>
 
 # CoffeeBara Cafe
 
 This is a website created for the CoffeeBara Cafe. The website is designed to provide information about the cafe, including its menu, location, and hours of operation.
-
-![CoffeeBara Logo](img/cbLogo_readme.svg)
 
 ## Technologies Used
 
