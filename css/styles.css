@@ -192,8 +192,23 @@ h1, h2 {
     flex-shrink: 0;
 }
 
-.navbar-toggler-icon {
 
+/* hover styling */
+
+.coffee-bag {
+    cursor: pointer;
+    object-fit: cover;
+    max-width: 50%;
+    max-height: auto;
+    border: 0;
+    transition: border-width 0.2s, transform 0.3s;
+    border-style: outset;
+    /* border-color: #007bff; */
+}
+
+.coffee-bag:hover {
+    border-width: 2px;
+    transform: scale(1.10);
 }
 
 
